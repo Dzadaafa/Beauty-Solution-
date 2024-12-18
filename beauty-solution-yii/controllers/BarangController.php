@@ -62,14 +62,14 @@ class BarangController extends Controller
 
     /**
      * Displays a single barang model.
-     * @param int $id_barang Id Barang
+     * @param int $id Id Barang
      * @return string
      * @throws NotFoundHttpException if the model cannot be found
      */
-    public function actionView($id_barang)
+    public function actionView($id)
     {
         return $this->render('view', [
-            'model' => $this->findModel($id_barang),
+            'model' => $this->findModel($id),
         ]);
     }
 
@@ -84,7 +84,7 @@ class BarangController extends Controller
 
         if ($this->request->isPost) {
             if ($model->load($this->request->post()) && $model->save()) {
-                return $this->redirect(['view', 'id_barang' => $model->id_barang]);
+                return $this->redirect(['view', 'id' => $model->id]);
             }
         } else {
             $model->loadDefaultValues();
@@ -98,16 +98,16 @@ class BarangController extends Controller
     /**
      * Updates an existing barang model.
      * If update is successful, the browser will be redirected to the 'view' page.
-     * @param int $id_barang Id Barang
+     * @param int $id Id Barang
      * @return string|\yii\web\Response
      * @throws NotFoundHttpException if the model cannot be found
      */
-    public function actionUpdate($id_barang)
+    public function actionUpdate($id)
     {
-        $model = $this->findModel($id_barang);
+        $model = $this->findModel($id);
 
         if ($this->request->isPost && $model->load($this->request->post()) && $model->save()) {
-            return $this->redirect(['view', 'id_barang' => $model->id_barang]);
+            return $this->redirect(['view', 'id' => $model->id]);
         }
 
         return $this->render('update', [
@@ -118,13 +118,13 @@ class BarangController extends Controller
     /**
      * Deletes an existing barang model.
      * If deletion is successful, the browser will be redirected to the 'index' page.
-     * @param int $id_barang Id Barang
+     * @param int $id Id Barang
      * @return \yii\web\Response
      * @throws NotFoundHttpException if the model cannot be found
      */
-    public function actionDelete($id_barang)
+    public function actionDelete($id)
     {
-        $this->findModel($id_barang)->delete();
+        $this->findModel($id)->delete();
 
         return $this->redirect(['index']);
     }
@@ -132,13 +132,13 @@ class BarangController extends Controller
     /**
      * Finds the barang model based on its primary key value.
      * If the model is not found, a 404 HTTP exception will be thrown.
-     * @param int $id_barang Id Barang
+     * @param int $id Id Barang
      * @return barang the loaded model
      * @throws NotFoundHttpException if the model cannot be found
      */
-    protected function findModel($id_barang)
+    protected function findModel($id)
     {
-        if (($model = barang::findOne(['id_barang' => $id_barang])) !== null) {
+        if (($model = barang::findOne(['id' => $id])) !== null) {
             return $model;
         }
 

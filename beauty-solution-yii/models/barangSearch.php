@@ -17,7 +17,7 @@ class barangSearch extends barang
     public function rules()
     {
         return [
-            [['id_barang', 'harga_jual', 'stok'], 'integer'],
+            [['id', 'harga_jual', 'stok'], 'integer'],
             [['nama'], 'safe'],
         ];
     }
@@ -58,7 +58,7 @@ class barangSearch extends barang
 
         // grid filtering conditions
         $query->andFilterWhere([
-            'id_barang' => $this->id_barang,
+            'id' => $this->id,
             'harga_jual' => $this->harga_jual,
             'stok' => $this->stok,
         ]);

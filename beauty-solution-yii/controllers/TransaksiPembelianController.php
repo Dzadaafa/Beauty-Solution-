@@ -3,6 +3,7 @@
 namespace app\controllers;
 
 use app\models\TransaksiPembelian;
+use app\models\DetailPembelian;
 use app\models\TransaksiPembelianSearch;
 use yii\web\Controller;
 use yii\web\NotFoundHttpException;
@@ -77,8 +78,12 @@ class TransaksiPembelianController extends Controller
      */
     public function actionView($id)
     {
+        $data = Yii::$app->db->createCommand('SELECT * FROM detail_pembelian where id_pembelian = :id')
+        ->bindValue(':id', (int) $id)
+        ->queryAll();
         return $this->render('view', [
-            'model' => $this->findModel($id),
+            'model' => $this->findModel($id), // Main model data
+            'data' => $data,                 // Additional detail_pembelian data
         ]);
     }
 
@@ -87,22 +92,91 @@ class TransaksiPembelianController extends Controller
      * If creation is successful, the browser will be redirected to the 'view' page.
      * @return string|\yii\web\Response
      */
+    // public function actionCreate()
+    // {
+    //     $model = new TransaksiPembelian();
+
+    //     if ($this->request->isPost) {
+    //         if ($model->load($this->request->post()) && $model->save()) {
+    //             return $this->redirect(['view', 'id' => $model->id]);
+    //         }
+    //     } else {
+    //         $model->loadDefaultValues();
+    //     }
+
+    //     return $this->render('create', [
+    //         'model' => $model,
+    //     ]);
+    // }
+
     public function actionCreate()
     {
         $model = new TransaksiPembelian();
 
         if ($this->request->isPost) {
-            if ($model->load($this->request->post()) && $model->save()) {
-                return $this->redirect(['view', 'id' => $model->id]);
+            $postData = $this->request->post('TransaksiPembelian');
+            
+            // Retrieve the jumlah_barang_masuk from POST data
+            $jumlahBarangMasuk = $this->request->post('jumlah_barang_masuk');
+            $idBarang = $this->request->post('id_barang');
+
+            // Prepare data for the main table (TransaksiPembelian)
+            $mainTableData = [
+                'id' => $postData['id'],
+                'id_owner' => $postData['id_owner'],
+                'id_distributor' => $postData['id_distributor'],
+                'jumlah_bayar' => $postData['jumlah_bayar'],
+                'tanggal' => date('Y-m-d H:i:s'),
+            ];
+
+            // Prepare data for the second table (DetailPembelian), including jumlah_barang_masuk
+            $detailTableData = [
+                'id_barang' => $idBarang,
+                'jumlah_barang_masuk' => $jumlahBarangMasuk,
+            ];
+
+            // Start a database transaction
+            $transaction = Yii::$app->db->beginTransaction();
+            try {
+                // Assign data to the TransaksiPembelian model and validate
+                $model->attributes = $mainTableData;
+
+                if ($model->validate() && $model->save()) {
+                    // Insert data into the second table (DetailPembelian) using Query Builder
+                    Yii::$app->db->createCommand()->insert('detail_pembelian', [
+                        // 'id_pembelian' => $mainTableData['id'], 
+                        'id_barang' => $detailTableData['id_barang'],
+                        'jumlah_barang_masuk' => $detailTableData['jumlah_barang_masuk'],
+                        'harga_beli' => (int) $mainTableData['jumlah_bayar'] / (int) $detailTableData['jumlah_barang_masuk'],
+                    ])->execute();
+
+                    // Commit the transaction if both operations succeed
+                    $transaction->commit();
+
+                    Yii::$app->session->setFlash('success', 'Data transaksi berhasil disimpan.');
+                    return $this->redirect(['view', 'id' => $model->id]);
+                } else {
+                    // Rollback if validation fails or saving the main model fails
+                    $transaction->rollBack();
+                    Yii::$app->session->setFlash('error', 'Gagal menyimpan data. Periksa kembali input Anda.');
+                }
+            } catch (\Exception $e) {
+                // Rollback the transaction in case of an exception
+                $transaction->rollBack();
+                Yii::$app->session->setFlash('error', 'Terjadi kesalahan: ' . $e->getMessage());
+                throw $e;
             }
         } else {
+            // Load default values if no POST data
             $model->loadDefaultValues();
         }
 
+        // Render the view and pass the main model
         return $this->render('create', [
             'model' => $model,
         ]);
     }
+
 
     /**
      * Updates an existing TransaksiPembelian model.

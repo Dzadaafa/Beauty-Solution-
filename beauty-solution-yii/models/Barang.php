@@ -7,7 +7,7 @@ use Yii;
 /**
  * This is the model class for table "barang".
  *
- * @property int $id_barang
+ * @property int $id
  * @property string $nama
  * @property int $harga_jual
  * @property int|null $stok
@@ -33,7 +33,7 @@ class Barang extends \yii\db\ActiveRecord
         return [
             [['nama', 'harga_jual'], 'required'],
             [['harga_jual', 'stok'], 'integer'],
-            [['nama'], 'string', 'max' => 45],
+            [['nama'], 'string', 'max' => 50],
         ];
     }
 
@@ -43,7 +43,7 @@ class Barang extends \yii\db\ActiveRecord
     public function attributeLabels()
     {
         return [
-            'id_barang' => 'Id Barang',
+            'id' => 'ID',
             'nama' => 'Nama',
             'harga_jual' => 'Harga Jual',
             'stok' => 'Stok',
@@ -57,7 +57,7 @@ class Barang extends \yii\db\ActiveRecord
      */
     public function getDetailPembelians()
     {
-        return $this->hasMany(DetailPembelian::class, ['id_barang' => 'id_barang']);
+        return $this->hasMany(DetailPembelian::class, ['id_barang' => 'id']);
     }
 
     /**
@@ -67,6 +67,6 @@ class Barang extends \yii\db\ActiveRecord
      */
     public function getDetailPenjualans()
     {
-        return $this->hasMany(DetailPenjualan::class, ['id_barang' => 'id_barang']);
+        return $this->hasMany(DetailPenjualan::class, ['id_barang' => 'id']);
     }
 }

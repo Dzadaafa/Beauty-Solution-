@@ -29,15 +29,15 @@ $this->title = 'Barang';
         'columns' => [
             ['class' => 'yii\grid\SerialColumn'],
 
-            'id_barang',
+            'id',
             'nama',
             'harga_jual',
             'stok',
             [
                 'class' => ActionColumn::className(),
                 'urlCreator' => function ($action, barang $model, $key, $index, $column) {
-                    return Url::toRoute([$action, 'id_barang' => $model->id_barang]);
-                 }
+                    return Url::toRoute([$action, 'id_barang' => $model->id]);
+                }
             ],
         ],
     ]); ?>
