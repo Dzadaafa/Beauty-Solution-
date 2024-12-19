@@ -24,7 +24,7 @@ This Yii2-based web application is designed to streamline operations for cosmeti
 
 for more detailed documentation, please refer to the link below. The document is written in indonesian.
 
-[View Documentation](/document)
+[View Documentation](/document/project_documentation.docx)
 
 
 ## Team
