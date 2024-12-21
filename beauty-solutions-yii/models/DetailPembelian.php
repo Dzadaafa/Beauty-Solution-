@@ -32,9 +32,9 @@ class DetailPembelian extends \yii\db\ActiveRecord
     public function rules()
     {
         return [
-            [['no', 'id_pembelian', 'id_barang', 'jumlah_barang_masuk', 'harga_beli'], 'required'],
-            [['no', 'id_pembelian', 'id_barang', 'jumlah_barang_masuk', 'harga_beli'], 'integer'],
-            [['no'], 'unique'],
+            [['id_pembelian', 'id_barang', 'jumlah_barang_masuk', 'harga_beli'], 'required'],
+            [['id_pembelian', 'id_barang', 'jumlah_barang_masuk', 'harga_beli'], 'integer'],
+            // [['no'], 'unique'],
             [['id_pembelian'], 'exist', 'skipOnError' => true, 'targetClass' => TransaksiPembelian::class, 'targetAttribute' => ['id_pembelian' => 'id']],
             [['id_barang'], 'exist', 'skipOnError' => true, 'targetClass' => Barang::class, 'targetAttribute' => ['id_barang' => 'id']],
         ];

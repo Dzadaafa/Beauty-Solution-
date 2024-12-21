@@ -63,7 +63,7 @@ class barangSearch extends barang
             'stok' => $this->stok,
         ]);
 
-        $query->andFilterWhere(['like', 'nama', $this->nama]);
+        // $query->andFilterWhere(['like', 'nama', $this->nama]);
 
         return $dataProvider;
     }
