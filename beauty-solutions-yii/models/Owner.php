@@ -31,7 +31,7 @@ class Owner extends \yii\db\ActiveRecord
     public function rules()
     {
         return [
-            [['id', 'nama', 'alamat', 'no_telepon'], 'required'],
+            [['nama', 'alamat', 'no_telepon'], 'required'],
             [['id'], 'integer'],
             [['nama'], 'string', 'max' => 50],
             [['alamat'], 'string', 'max' => 100],

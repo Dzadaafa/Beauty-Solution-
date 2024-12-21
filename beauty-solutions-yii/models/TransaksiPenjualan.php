@@ -30,7 +30,7 @@ class TransaksiPenjualan extends \yii\db\ActiveRecord
     public function rules()
     {
         return [
-            [['id', 'id_owner'], 'required'],
+            [['id_owner'], 'required'],
             [['id', 'id_owner'], 'integer'],
             [['tanggal'], 'safe'],
             [['id'], 'unique'],

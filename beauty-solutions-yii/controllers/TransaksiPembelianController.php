@@ -2,6 +2,7 @@
 
 namespace app\controllers;
 
+use app\models\Barang;
 use app\models\TransaksiPembelian;
 use app\models\DetailPembelian;
 use app\models\TransaksiPembelianSearch;
@@ -111,69 +112,85 @@ class TransaksiPembelianController extends Controller
 
     public function actionCreate()
     {
-        $model = new TransaksiPembelian();
+        $transaksi_pembelian = new TransaksiPembelian();
 
         if ($this->request->isPost) {
             $postData = $this->request->post('TransaksiPembelian');
-            
-            // Retrieve the jumlah_barang_masuk from POST data
             $jumlahBarangMasuk = $this->request->post('jumlah_barang_masuk');
             $idBarang = $this->request->post('id_barang');
-
+            // $idPembelian = $this->request->post('id_pembelian');
             // Prepare data for the main table (TransaksiPembelian)
-            $mainTableData = [
-                'id' => $postData['id'],
-                'id_owner' => $postData['id_owner'],
-                'id_distributor' => $postData['id_distributor'],
-                'jumlah_bayar' => $postData['jumlah_bayar'],
-                'tanggal' => date('Y-m-d H:i:s'),
-            ];
+            $transaksi_pembelian->id_owner=$postData['id_owner'];
+            $transaksi_pembelian->id_distributor= $postData['id_distributor'];
+            $transaksi_pembelian->jumlah_bayar= $postData['jumlah_bayar'];
+            $transaksi_pembelian->tanggal= date('Y-m-d H:i:s');
+            $result = $transaksi_pembelian->save();
+            // $mainTableData = [
+            //     'id' => $postData->getPrimaryKey(),
+            //     'id_owner' => $postData['id_owner'],
+            //     'id_distributor' => $postData['id_distributor'],
+            //     'jumlah_bayar' => $postData['jumlah_bayar'],
+            //     'tanggal' => date('Y-m-d H:i:s'),
+            // ];
 
-            // Prepare data for the second table (DetailPembelian), including jumlah_barang_masuk
-            $detailTableData = [
-                'id_barang' => $idBarang,
-                'jumlah_barang_masuk' => $jumlahBarangMasuk,
-            ];
+            // $detailTableData = [
+            //     // 'id_pembelian' => $idPembelian,
+            //     'id_barang' => $idBarang,
+            //     'jumlah_barang_masuk' => $jumlahBarangMasuk,
+            // ];
 
             // Start a database transaction
-            $transaction = Yii::$app->db->beginTransaction();
+            // $transaction = Yii::$app->db->beginTransaction();
+            // dd($transaksi_pembelian);
             try {
                 // Assign data to the TransaksiPembelian model and validate
-                $model->attributes = $mainTableData;
+                // $model->attributes = $mainTableData;
 
-                if ($model->validate() && $model->save()) {
+                if ($result) {
                     // Insert data into the second table (DetailPembelian) using Query Builder
-                    Yii::$app->db->createCommand()->insert('detail_pembelian', [
-                        // 'id_pembelian' => $mainTableData['id'], 
-                        'id_barang' => $detailTableData['id_barang'],
-                        'jumlah_barang_masuk' => $detailTableData['jumlah_barang_masuk'],
-                        'harga_beli' => (int) $mainTableData['jumlah_bayar'] / (int) $detailTableData['jumlah_barang_masuk'],
-                    ])->execute();
+                    $detail_pembelian = new DetailPembelian;
+                    $detail_pembelian->id_pembelian = $transaksi_pembelian->getPrimaryKey();
+                    $detail_pembelian->id_barang = $idBarang;
+                    $detail_pembelian->jumlah_barang_masuk = $jumlahBarangMasuk;
+                    $detail_pembelian->harga_beli = (int) $transaksi_pembelian->jumlah_bayar / (int) $jumlahBarangMasuk;
+                    // dd($detail_pembelian);
+                    $detail_pembelian->save();
+                    // Yii::$app->db->createCommand()->insert('detail_pembelian', [
+                    //     'id_pembelian' => $model->getPrimaryKey(), 
+                    //     'id_barang' => $detailTableData['id_barang'],
+                    //     'jumlah_barang_masuk' => $detailTableData['jumlah_barang_masuk'],
+                    //     'harga_beli' => (int) $mainTableData['jumlah_bayar'] / (int) $detailTableData['jumlah_barang_masuk'],
+                    // ])->execute();
 
                     // Commit the transaction if both operations succeed
-                    $transaction->commit();
+                    // $transaction->commit();
 
                     Yii::$app->session->setFlash('success', 'Data transaksi berhasil disimpan.');
-                    return $this->redirect(['view', 'id' => $model->id]);
+                    return $this->redirect(['view', 'id' => $transaksi_pembelian->getPrimaryKey()]);
                 } else {
                     // Rollback if validation fails or saving the main model fails
-                    $transaction->rollBack();
+                    // $transaction->rollBack();
                     Yii::$app->session->setFlash('error', 'Gagal menyimpan data. Periksa kembali input Anda.');
                 }
             } catch (\Exception $e) {
                 // Rollback the transaction in case of an exception
-                $transaction->rollBack();
+                // $transaction->rollBack();
                 Yii::$app->session->setFlash('error', 'Terjadi kesalahan: ' . $e->getMessage());
                 throw $e;
             }
         } else {
             // Load default values if no POST data
-            $model->loadDefaultValues();
+            $transaksi_pembelian->loadDefaultValues();
         }
 
         // Render the view and pass the main model
+         $barang= Barang::find()
+        ->select(['id','nama'])
+        ->asArray()
+        ->all();
         return $this->render('create', [
-            'model' => $model,
+            'model' => $transaksi_pembelian ,
+            'barang'=>$barang
         ]);
     }
 

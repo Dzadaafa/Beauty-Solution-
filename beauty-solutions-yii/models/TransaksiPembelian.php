@@ -33,10 +33,10 @@ class TransaksiPembelian extends \yii\db\ActiveRecord
     public function rules()
     {
         return [
-            [['id', 'id_distributor', 'id_owner', 'jumlah_bayar'], 'required'],
-            [['id', 'id_distributor', 'id_owner', 'jumlah_bayar'], 'integer'],
+            [['id_distributor', 'id_owner', 'jumlah_bayar'], 'required'],
+            [['id_distributor', 'id_owner', 'jumlah_bayar'], 'integer'],
             [['tanggal'], 'safe'],
-            [['id'], 'unique'],
+            // [['id'], 'unique'],
             [['id_distributor'], 'exist', 'skipOnError' => true, 'targetClass' => Distributor::class, 'targetAttribute' => ['id_distributor' => 'id']],
             [['id_owner'], 'exist', 'skipOnError' => true, 'targetClass' => Owner::class, 'targetAttribute' => ['id_owner' => 'id']],
         ];

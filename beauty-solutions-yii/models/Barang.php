@@ -32,7 +32,7 @@ class Barang extends \yii\db\ActiveRecord
     {
         return [
             [['nama', 'harga_jual'], 'required'],
-            [['harga_jual', 'stok'], 'integer'],
+            [['id','harga_jual', 'stok'], 'integer'],
             [['nama'], 'string', 'max' => 50],
         ];
     }

@@ -36,7 +36,7 @@ $this->title = 'Barang';
             [
                 'class' => ActionColumn::className(),
                 'urlCreator' => function ($action, barang $model, $key, $index, $column) {
-                    return Url::toRoute([$action, 'id_barang' => $model->id]);
+                    return Url::toRoute([$action, 'id' => $model->id]);
                 }
             ],
         ],

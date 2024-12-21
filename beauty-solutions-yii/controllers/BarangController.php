@@ -62,7 +62,7 @@ class BarangController extends Controller
 
     /**
      * Displays a single barang model.
-     * @param int $id Id Barang
+     * @param int $id ID
      * @return string
      * @throws NotFoundHttpException if the model cannot be found
      */
@@ -98,7 +98,7 @@ class BarangController extends Controller
     /**
      * Updates an existing barang model.
      * If update is successful, the browser will be redirected to the 'view' page.
-     * @param int $id Id Barang
+     * @param int $id ID
      * @return string|\yii\web\Response
      * @throws NotFoundHttpException if the model cannot be found
      */
@@ -118,7 +118,7 @@ class BarangController extends Controller
     /**
      * Deletes an existing barang model.
      * If deletion is successful, the browser will be redirected to the 'index' page.
-     * @param int $id Id Barang
+     * @param int $id ID
      * @return \yii\web\Response
      * @throws NotFoundHttpException if the model cannot be found
      */
@@ -132,7 +132,7 @@ class BarangController extends Controller
     /**
      * Finds the barang model based on its primary key value.
      * If the model is not found, a 404 HTTP exception will be thrown.
-     * @param int $id Id Barang
+     * @param int $id ID
      * @return barang the loaded model
      * @throws NotFoundHttpException if the model cannot be found
      */
