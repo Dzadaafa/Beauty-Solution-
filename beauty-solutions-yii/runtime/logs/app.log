@@ -14591,3 +14591,580 @@ $_SERVER = [
     'REQUEST_TIME_FLOAT' => 1734505996.9604
     'REQUEST_TIME' => 1734505996
 ]
+2024-12-22 03:39:34 [::1][101][jlioj9dcejpsp0kaudhpif5201][error][yii\base\ErrorException:2] yii\base\ErrorException: Undefined variable $listData in D:\Basisdata\tugas kelompok\file\Beauty-Solution-\beauty-solutions-yii\views\transaksi-pembelian\_form.php:19
+Stack trace:
+#0 D:\Basisdata\tugas kelompok\file\Beauty-Solution-\beauty-solutions-yii\views\transaksi-pembelian\_form.php(19): yii\base\ErrorHandler->handleError(2, 'Undefined varia...', 'D:\\Basisdata\\tu...', 19)
+#1 D:\Basisdata\tugas kelompok\file\Beauty-Solution-\beauty-solutions-yii\vendor\yiisoft\yii2\base\View.php(348): require('D:\\Basisdata\\tu...')
+#2 D:\Basisdata\tugas kelompok\file\Beauty-Solution-\beauty-solutions-yii\vendor\yiisoft\yii2\base\View.php(258): yii\base\View->renderPhpFile('D:\\Basisdata\\tu...', Array)
+#3 D:\Basisdata\tugas kelompok\file\Beauty-Solution-\beauty-solutions-yii\vendor\yiisoft\yii2\base\View.php(157): yii\base\View->renderFile('D:\\Basisdata\\tu...', Array, NULL)
+#4 D:\Basisdata\tugas kelompok\file\Beauty-Solution-\beauty-solutions-yii\views\transaksi-pembelian\create.php(16): yii\base\View->render('_form', Array)
+#5 D:\Basisdata\tugas kelompok\file\Beauty-Solution-\beauty-solutions-yii\vendor\yiisoft\yii2\base\View.php(348): require('D:\\Basisdata\\tu...')
+#6 D:\Basisdata\tugas kelompok\file\Beauty-Solution-\beauty-solutions-yii\vendor\yiisoft\yii2\base\View.php(258): yii\base\View->renderPhpFile('D:\\Basisdata\\tu...', Array)
+#7 D:\Basisdata\tugas kelompok\file\Beauty-Solution-\beauty-solutions-yii\vendor\yiisoft\yii2\base\View.php(157): yii\base\View->renderFile('D:\\Basisdata\\tu...', Array, Object(app\controllers\TransaksiPembelianController))
+#8 D:\Basisdata\tugas kelompok\file\Beauty-Solution-\beauty-solutions-yii\vendor\yiisoft\yii2\base\Controller.php(407): yii\base\View->render('create', Array, Object(app\controllers\TransaksiPembelianController))
+#9 D:\Basisdata\tugas kelompok\file\Beauty-Solution-\beauty-solutions-yii\controllers\TransaksiPembelianController.php(193): yii\base\Controller->render('create', Array)
+#10 [internal function]: app\controllers\TransaksiPembelianController->actionCreate()
+#11 D:\Basisdata\tugas kelompok\file\Beauty-Solution-\beauty-solutions-yii\vendor\yiisoft\yii2\base\InlineAction.php(57): call_user_func_array(Array, Array)
+#12 D:\Basisdata\tugas kelompok\file\Beauty-Solution-\beauty-solutions-yii\vendor\yiisoft\yii2\base\Controller.php(178): yii\base\InlineAction->runWithParams(Array)
+#13 D:\Basisdata\tugas kelompok\file\Beauty-Solution-\beauty-solutions-yii\vendor\yiisoft\yii2\base\Module.php(552): yii\base\Controller->runAction('create', Array)
+#14 D:\Basisdata\tugas kelompok\file\Beauty-Solution-\beauty-solutions-yii\vendor\yiisoft\yii2\web\Application.php(103): yii\base\Module->runAction('transaksi-pembe...', Array)
+#15 D:\Basisdata\tugas kelompok\file\Beauty-Solution-\beauty-solutions-yii\vendor\yiisoft\yii2\base\Application.php(384): yii\web\Application->handleRequest(Object(yii\web\Request))
+#16 D:\Basisdata\tugas kelompok\file\Beauty-Solution-\beauty-solutions-yii\web\index.php(12): yii\base\Application->run()
+#17 {main}
+2024-12-22 03:39:32 [::1][101][jlioj9dcejpsp0kaudhpif5201][info][application] $_GET = []
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    '_identity' => 'c1de3af0e62b881608198f8e21b0d36ed8a8167b111e0e92943d43047940a7bea:2:{i:0;s:9:\"_identity\";i:1;s:28:\"[\"101\",\"test101key\",2592000]\";}'
+    'PHPSESSID' => 'jlioj9dcejpsp0kaudhpif5201'
+    '_csrf' => 'f2c7d4a4b8d744c667d9c472c83a057f9a8c003d072e999f3dd2a6f9434cb132a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"nQ7h7RwaJPxtS3XUrkPb8C9yTol6TmFR\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__id' => '101'
+    '__authKey' => 'test101key'
+]
+
+$_SERVER = [
+    'DOCUMENT_ROOT' => 'D:\\Basisdata\\tugas kelompok\\file\\Beauty-Solution-\\beauty-solutions-yii\\web'
+    'REMOTE_ADDR' => '::1'
+    'REMOTE_PORT' => '50172'
+    'SERVER_SOFTWARE' => 'PHP 8.2.12 Development Server'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_PORT' => '8080'
+    'REQUEST_URI' => '/transaksi-pembelian/create'
+    'REQUEST_METHOD' => 'GET'
+    'SCRIPT_NAME' => '/index.php'
+    'SCRIPT_FILENAME' => 'D:\\Basisdata\\tugas kelompok\\file\\Beauty-Solution-\\beauty-solutions-yii\\web\\index.php'
+    'PATH_INFO' => '/transaksi-pembelian/create'
+    'PHP_SELF' => '/index.php/transaksi-pembelian/create'
+    'HTTP_HOST' => 'localhost:8080'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_SEC_CH_UA' => '\"Google Chrome\";v=\"131\", \"Chromium\";v=\"131\", \"Not_A Brand\";v=\"24\"'
+    'HTTP_SEC_CH_UA_MOBILE' => '?0'
+    'HTTP_SEC_CH_UA_PLATFORM' => '\"Windows\"'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/131.0.0.0 Safari/537.36'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7'
+    'HTTP_SEC_FETCH_SITE' => 'none'
+    'HTTP_SEC_FETCH_MODE' => 'navigate'
+    'HTTP_SEC_FETCH_USER' => '?1'
+    'HTTP_SEC_FETCH_DEST' => 'document'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br, zstd'
+    'HTTP_ACCEPT_LANGUAGE' => 'id-ID,id;q=0.9,en-US;q=0.8,en;q=0.7'
+    'HTTP_COOKIE' => '_identity=c1de3af0e62b881608198f8e21b0d36ed8a8167b111e0e92943d43047940a7bea%3A2%3A%7Bi%3A0%3Bs%3A9%3A%22_identity%22%3Bi%3A1%3Bs%3A28%3A%22%5B%22101%22%2C%22test101key%22%2C2592000%5D%22%3B%7D; PHPSESSID=jlioj9dcejpsp0kaudhpif5201; _csrf=f2c7d4a4b8d744c667d9c472c83a057f9a8c003d072e999f3dd2a6f9434cb132a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22nQ7h7RwaJPxtS3XUrkPb8C9yTol6TmFR%22%3B%7D'
+    'REQUEST_TIME_FLOAT' => 1734835172.5345
+    'REQUEST_TIME' => 1734835172
+]
+2024-12-22 03:43:14 [::1][101][jlioj9dcejpsp0kaudhpif5201][error][yii\base\ErrorException:2] yii\base\ErrorException: Undefined variable $listData in D:\Basisdata\tugas kelompok\file\Beauty-Solution-\beauty-solutions-yii\views\transaksi-pembelian\_form.php:19
+Stack trace:
+#0 D:\Basisdata\tugas kelompok\file\Beauty-Solution-\beauty-solutions-yii\views\transaksi-pembelian\_form.php(19): yii\base\ErrorHandler->handleError(2, 'Undefined varia...', 'D:\\Basisdata\\tu...', 19)
+#1 D:\Basisdata\tugas kelompok\file\Beauty-Solution-\beauty-solutions-yii\vendor\yiisoft\yii2\base\View.php(348): require('D:\\Basisdata\\tu...')
+#2 D:\Basisdata\tugas kelompok\file\Beauty-Solution-\beauty-solutions-yii\vendor\yiisoft\yii2\base\View.php(258): yii\base\View->renderPhpFile('D:\\Basisdata\\tu...', Array)
+#3 D:\Basisdata\tugas kelompok\file\Beauty-Solution-\beauty-solutions-yii\vendor\yiisoft\yii2\base\View.php(157): yii\base\View->renderFile('D:\\Basisdata\\tu...', Array, NULL)
+#4 D:\Basisdata\tugas kelompok\file\Beauty-Solution-\beauty-solutions-yii\views\transaksi-pembelian\create.php(16): yii\base\View->render('_form', Array)
+#5 D:\Basisdata\tugas kelompok\file\Beauty-Solution-\beauty-solutions-yii\vendor\yiisoft\yii2\base\View.php(348): require('D:\\Basisdata\\tu...')
+#6 D:\Basisdata\tugas kelompok\file\Beauty-Solution-\beauty-solutions-yii\vendor\yiisoft\yii2\base\View.php(258): yii\base\View->renderPhpFile('D:\\Basisdata\\tu...', Array)
+#7 D:\Basisdata\tugas kelompok\file\Beauty-Solution-\beauty-solutions-yii\vendor\yiisoft\yii2\base\View.php(157): yii\base\View->renderFile('D:\\Basisdata\\tu...', Array, Object(app\controllers\TransaksiPembelianController))
+#8 D:\Basisdata\tugas kelompok\file\Beauty-Solution-\beauty-solutions-yii\vendor\yiisoft\yii2\base\Controller.php(407): yii\base\View->render('create', Array, Object(app\controllers\TransaksiPembelianController))
+#9 D:\Basisdata\tugas kelompok\file\Beauty-Solution-\beauty-solutions-yii\controllers\TransaksiPembelianController.php(196): yii\base\Controller->render('create', Array)
+#10 [internal function]: app\controllers\TransaksiPembelianController->actionCreate()
+#11 D:\Basisdata\tugas kelompok\file\Beauty-Solution-\beauty-solutions-yii\vendor\yiisoft\yii2\base\InlineAction.php(57): call_user_func_array(Array, Array)
+#12 D:\Basisdata\tugas kelompok\file\Beauty-Solution-\beauty-solutions-yii\vendor\yiisoft\yii2\base\Controller.php(178): yii\base\InlineAction->runWithParams(Array)
+#13 D:\Basisdata\tugas kelompok\file\Beauty-Solution-\beauty-solutions-yii\vendor\yiisoft\yii2\base\Module.php(552): yii\base\Controller->runAction('create', Array)
+#14 D:\Basisdata\tugas kelompok\file\Beauty-Solution-\beauty-solutions-yii\vendor\yiisoft\yii2\web\Application.php(103): yii\base\Module->runAction('transaksi-pembe...', Array)
+#15 D:\Basisdata\tugas kelompok\file\Beauty-Solution-\beauty-solutions-yii\vendor\yiisoft\yii2\base\Application.php(384): yii\web\Application->handleRequest(Object(yii\web\Request))
+#16 D:\Basisdata\tugas kelompok\file\Beauty-Solution-\beauty-solutions-yii\web\index.php(12): yii\base\Application->run()
+#17 {main}
+2024-12-22 03:43:12 [::1][101][jlioj9dcejpsp0kaudhpif5201][info][application] $_GET = []
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    '_identity' => 'c1de3af0e62b881608198f8e21b0d36ed8a8167b111e0e92943d43047940a7bea:2:{i:0;s:9:\"_identity\";i:1;s:28:\"[\"101\",\"test101key\",2592000]\";}'
+    'PHPSESSID' => 'jlioj9dcejpsp0kaudhpif5201'
+    '_csrf' => 'f2c7d4a4b8d744c667d9c472c83a057f9a8c003d072e999f3dd2a6f9434cb132a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"nQ7h7RwaJPxtS3XUrkPb8C9yTol6TmFR\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__id' => '101'
+    '__authKey' => 'test101key'
+]
+
+$_SERVER = [
+    'DOCUMENT_ROOT' => 'D:\\Basisdata\\tugas kelompok\\file\\Beauty-Solution-\\beauty-solutions-yii\\web'
+    'REMOTE_ADDR' => '::1'
+    'REMOTE_PORT' => '50183'
+    'SERVER_SOFTWARE' => 'PHP 8.2.12 Development Server'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_PORT' => '8080'
+    'REQUEST_URI' => '/transaksi-pembelian/create'
+    'REQUEST_METHOD' => 'GET'
+    'SCRIPT_NAME' => '/index.php'
+    'SCRIPT_FILENAME' => 'D:\\Basisdata\\tugas kelompok\\file\\Beauty-Solution-\\beauty-solutions-yii\\web\\index.php'
+    'PATH_INFO' => '/transaksi-pembelian/create'
+    'PHP_SELF' => '/index.php/transaksi-pembelian/create'
+    'HTTP_HOST' => 'localhost:8080'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_SEC_CH_UA' => '\"Google Chrome\";v=\"131\", \"Chromium\";v=\"131\", \"Not_A Brand\";v=\"24\"'
+    'HTTP_SEC_CH_UA_MOBILE' => '?0'
+    'HTTP_SEC_CH_UA_PLATFORM' => '\"Windows\"'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/131.0.0.0 Safari/537.36'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7'
+    'HTTP_SEC_FETCH_SITE' => 'none'
+    'HTTP_SEC_FETCH_MODE' => 'navigate'
+    'HTTP_SEC_FETCH_USER' => '?1'
+    'HTTP_SEC_FETCH_DEST' => 'document'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br, zstd'
+    'HTTP_ACCEPT_LANGUAGE' => 'id-ID,id;q=0.9,en-US;q=0.8,en;q=0.7'
+    'HTTP_COOKIE' => '_identity=c1de3af0e62b881608198f8e21b0d36ed8a8167b111e0e92943d43047940a7bea%3A2%3A%7Bi%3A0%3Bs%3A9%3A%22_identity%22%3Bi%3A1%3Bs%3A28%3A%22%5B%22101%22%2C%22test101key%22%2C2592000%5D%22%3B%7D; PHPSESSID=jlioj9dcejpsp0kaudhpif5201; _csrf=f2c7d4a4b8d744c667d9c472c83a057f9a8c003d072e999f3dd2a6f9434cb132a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22nQ7h7RwaJPxtS3XUrkPb8C9yTol6TmFR%22%3B%7D'
+    'REQUEST_TIME_FLOAT' => 1734835392.3913
+    'REQUEST_TIME' => 1734835392
+]
+2024-12-22 03:43:21 [::1][101][jlioj9dcejpsp0kaudhpif5201][error][yii\base\ErrorException:2] yii\base\ErrorException: Undefined variable $listData in D:\Basisdata\tugas kelompok\file\Beauty-Solution-\beauty-solutions-yii\views\transaksi-pembelian\_form.php:19
+Stack trace:
+#0 D:\Basisdata\tugas kelompok\file\Beauty-Solution-\beauty-solutions-yii\views\transaksi-pembelian\_form.php(19): yii\base\ErrorHandler->handleError(2, 'Undefined varia...', 'D:\\Basisdata\\tu...', 19)
+#1 D:\Basisdata\tugas kelompok\file\Beauty-Solution-\beauty-solutions-yii\vendor\yiisoft\yii2\base\View.php(348): require('D:\\Basisdata\\tu...')
+#2 D:\Basisdata\tugas kelompok\file\Beauty-Solution-\beauty-solutions-yii\vendor\yiisoft\yii2\base\View.php(258): yii\base\View->renderPhpFile('D:\\Basisdata\\tu...', Array)
+#3 D:\Basisdata\tugas kelompok\file\Beauty-Solution-\beauty-solutions-yii\vendor\yiisoft\yii2\base\View.php(157): yii\base\View->renderFile('D:\\Basisdata\\tu...', Array, NULL)
+#4 D:\Basisdata\tugas kelompok\file\Beauty-Solution-\beauty-solutions-yii\views\transaksi-pembelian\create.php(16): yii\base\View->render('_form', Array)
+#5 D:\Basisdata\tugas kelompok\file\Beauty-Solution-\beauty-solutions-yii\vendor\yiisoft\yii2\base\View.php(348): require('D:\\Basisdata\\tu...')
+#6 D:\Basisdata\tugas kelompok\file\Beauty-Solution-\beauty-solutions-yii\vendor\yiisoft\yii2\base\View.php(258): yii\base\View->renderPhpFile('D:\\Basisdata\\tu...', Array)
+#7 D:\Basisdata\tugas kelompok\file\Beauty-Solution-\beauty-solutions-yii\vendor\yiisoft\yii2\base\View.php(157): yii\base\View->renderFile('D:\\Basisdata\\tu...', Array, Object(app\controllers\TransaksiPembelianController))
+#8 D:\Basisdata\tugas kelompok\file\Beauty-Solution-\beauty-solutions-yii\vendor\yiisoft\yii2\base\Controller.php(407): yii\base\View->render('create', Array, Object(app\controllers\TransaksiPembelianController))
+#9 D:\Basisdata\tugas kelompok\file\Beauty-Solution-\beauty-solutions-yii\controllers\TransaksiPembelianController.php(196): yii\base\Controller->render('create', Array)
+#10 [internal function]: app\controllers\TransaksiPembelianController->actionCreate()
+#11 D:\Basisdata\tugas kelompok\file\Beauty-Solution-\beauty-solutions-yii\vendor\yiisoft\yii2\base\InlineAction.php(57): call_user_func_array(Array, Array)
+#12 D:\Basisdata\tugas kelompok\file\Beauty-Solution-\beauty-solutions-yii\vendor\yiisoft\yii2\base\Controller.php(178): yii\base\InlineAction->runWithParams(Array)
+#13 D:\Basisdata\tugas kelompok\file\Beauty-Solution-\beauty-solutions-yii\vendor\yiisoft\yii2\base\Module.php(552): yii\base\Controller->runAction('create', Array)
+#14 D:\Basisdata\tugas kelompok\file\Beauty-Solution-\beauty-solutions-yii\vendor\yiisoft\yii2\web\Application.php(103): yii\base\Module->runAction('transaksi-pembe...', Array)
+#15 D:\Basisdata\tugas kelompok\file\Beauty-Solution-\beauty-solutions-yii\vendor\yiisoft\yii2\base\Application.php(384): yii\web\Application->handleRequest(Object(yii\web\Request))
+#16 D:\Basisdata\tugas kelompok\file\Beauty-Solution-\beauty-solutions-yii\web\index.php(12): yii\base\Application->run()
+#17 {main}
+2024-12-22 03:43:19 [::1][101][jlioj9dcejpsp0kaudhpif5201][info][application] $_GET = []
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    '_identity' => 'c1de3af0e62b881608198f8e21b0d36ed8a8167b111e0e92943d43047940a7bea:2:{i:0;s:9:\"_identity\";i:1;s:28:\"[\"101\",\"test101key\",2592000]\";}'
+    'PHPSESSID' => 'jlioj9dcejpsp0kaudhpif5201'
+    '_csrf' => 'f2c7d4a4b8d744c667d9c472c83a057f9a8c003d072e999f3dd2a6f9434cb132a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"nQ7h7RwaJPxtS3XUrkPb8C9yTol6TmFR\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__id' => '101'
+    '__authKey' => 'test101key'
+]
+
+$_SERVER = [
+    'DOCUMENT_ROOT' => 'D:\\Basisdata\\tugas kelompok\\file\\Beauty-Solution-\\beauty-solutions-yii\\web'
+    'REMOTE_ADDR' => '::1'
+    'REMOTE_PORT' => '50182'
+    'SERVER_SOFTWARE' => 'PHP 8.2.12 Development Server'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_PORT' => '8080'
+    'REQUEST_URI' => '/transaksi-pembelian/create'
+    'REQUEST_METHOD' => 'GET'
+    'SCRIPT_NAME' => '/index.php'
+    'SCRIPT_FILENAME' => 'D:\\Basisdata\\tugas kelompok\\file\\Beauty-Solution-\\beauty-solutions-yii\\web\\index.php'
+    'PATH_INFO' => '/transaksi-pembelian/create'
+    'PHP_SELF' => '/index.php/transaksi-pembelian/create'
+    'HTTP_HOST' => 'localhost:8080'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_SEC_CH_UA' => '\"Google Chrome\";v=\"131\", \"Chromium\";v=\"131\", \"Not_A Brand\";v=\"24\"'
+    'HTTP_SEC_CH_UA_MOBILE' => '?0'
+    'HTTP_SEC_CH_UA_PLATFORM' => '\"Windows\"'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/131.0.0.0 Safari/537.36'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7'
+    'HTTP_SEC_FETCH_SITE' => 'none'
+    'HTTP_SEC_FETCH_MODE' => 'navigate'
+    'HTTP_SEC_FETCH_USER' => '?1'
+    'HTTP_SEC_FETCH_DEST' => 'document'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br, zstd'
+    'HTTP_ACCEPT_LANGUAGE' => 'id-ID,id;q=0.9,en-US;q=0.8,en;q=0.7'
+    'HTTP_COOKIE' => '_identity=c1de3af0e62b881608198f8e21b0d36ed8a8167b111e0e92943d43047940a7bea%3A2%3A%7Bi%3A0%3Bs%3A9%3A%22_identity%22%3Bi%3A1%3Bs%3A28%3A%22%5B%22101%22%2C%22test101key%22%2C2592000%5D%22%3B%7D; PHPSESSID=jlioj9dcejpsp0kaudhpif5201; _csrf=f2c7d4a4b8d744c667d9c472c83a057f9a8c003d072e999f3dd2a6f9434cb132a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22nQ7h7RwaJPxtS3XUrkPb8C9yTol6TmFR%22%3B%7D'
+    'REQUEST_TIME_FLOAT' => 1734835399.1441
+    'REQUEST_TIME' => 1734835399
+]
+2024-12-22 04:21:42 [::1][101][jlioj9dcejpsp0kaudhpif5201][error][yii\base\ErrorException:2] yii\base\ErrorException: Undefined variable $distributor in D:\Basisdata\tugas kelompok\file\Beauty-Solution-\beauty-solutions-yii\views\transaksi-pembelian\_form.php:19
+Stack trace:
+#0 D:\Basisdata\tugas kelompok\file\Beauty-Solution-\beauty-solutions-yii\views\transaksi-pembelian\_form.php(19): yii\base\ErrorHandler->handleError(2, 'Undefined varia...', 'D:\\Basisdata\\tu...', 19)
+#1 D:\Basisdata\tugas kelompok\file\Beauty-Solution-\beauty-solutions-yii\vendor\yiisoft\yii2\base\View.php(348): require('D:\\Basisdata\\tu...')
+#2 D:\Basisdata\tugas kelompok\file\Beauty-Solution-\beauty-solutions-yii\vendor\yiisoft\yii2\base\View.php(258): yii\base\View->renderPhpFile('D:\\Basisdata\\tu...', Array)
+#3 D:\Basisdata\tugas kelompok\file\Beauty-Solution-\beauty-solutions-yii\vendor\yiisoft\yii2\base\View.php(157): yii\base\View->renderFile('D:\\Basisdata\\tu...', Array, NULL)
+#4 D:\Basisdata\tugas kelompok\file\Beauty-Solution-\beauty-solutions-yii\views\transaksi-pembelian\update.php(17): yii\base\View->render('_form', Array)
+#5 D:\Basisdata\tugas kelompok\file\Beauty-Solution-\beauty-solutions-yii\vendor\yiisoft\yii2\base\View.php(348): require('D:\\Basisdata\\tu...')
+#6 D:\Basisdata\tugas kelompok\file\Beauty-Solution-\beauty-solutions-yii\vendor\yiisoft\yii2\base\View.php(258): yii\base\View->renderPhpFile('D:\\Basisdata\\tu...', Array)
+#7 D:\Basisdata\tugas kelompok\file\Beauty-Solution-\beauty-solutions-yii\vendor\yiisoft\yii2\base\View.php(157): yii\base\View->renderFile('D:\\Basisdata\\tu...', Array, Object(app\controllers\TransaksiPembelianController))
+#8 D:\Basisdata\tugas kelompok\file\Beauty-Solution-\beauty-solutions-yii\vendor\yiisoft\yii2\base\Controller.php(407): yii\base\View->render('update', Array, Object(app\controllers\TransaksiPembelianController))
+#9 D:\Basisdata\tugas kelompok\file\Beauty-Solution-\beauty-solutions-yii\controllers\TransaksiPembelianController.php(224): yii\base\Controller->render('update', Array)
+#10 [internal function]: app\controllers\TransaksiPembelianController->actionUpdate('31')
+#11 D:\Basisdata\tugas kelompok\file\Beauty-Solution-\beauty-solutions-yii\vendor\yiisoft\yii2\base\InlineAction.php(57): call_user_func_array(Array, Array)
+#12 D:\Basisdata\tugas kelompok\file\Beauty-Solution-\beauty-solutions-yii\vendor\yiisoft\yii2\base\Controller.php(178): yii\base\InlineAction->runWithParams(Array)
+#13 D:\Basisdata\tugas kelompok\file\Beauty-Solution-\beauty-solutions-yii\vendor\yiisoft\yii2\base\Module.php(552): yii\base\Controller->runAction('update', Array)
+#14 D:\Basisdata\tugas kelompok\file\Beauty-Solution-\beauty-solutions-yii\vendor\yiisoft\yii2\web\Application.php(103): yii\base\Module->runAction('transaksi-pembe...', Array)
+#15 D:\Basisdata\tugas kelompok\file\Beauty-Solution-\beauty-solutions-yii\vendor\yiisoft\yii2\base\Application.php(384): yii\web\Application->handleRequest(Object(yii\web\Request))
+#16 D:\Basisdata\tugas kelompok\file\Beauty-Solution-\beauty-solutions-yii\web\index.php(12): yii\base\Application->run()
+#17 {main}
+2024-12-22 04:21:39 [::1][101][jlioj9dcejpsp0kaudhpif5201][info][application] $_GET = [
+    'id' => '31'
+]
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    '_identity' => 'c1de3af0e62b881608198f8e21b0d36ed8a8167b111e0e92943d43047940a7bea:2:{i:0;s:9:\"_identity\";i:1;s:28:\"[\"101\",\"test101key\",2592000]\";}'
+    'PHPSESSID' => 'jlioj9dcejpsp0kaudhpif5201'
+    '_csrf' => 'f2c7d4a4b8d744c667d9c472c83a057f9a8c003d072e999f3dd2a6f9434cb132a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"nQ7h7RwaJPxtS3XUrkPb8C9yTol6TmFR\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__id' => '101'
+    '__authKey' => 'test101key'
+]
+
+$_SERVER = [
+    'DOCUMENT_ROOT' => 'D:\\Basisdata\\tugas kelompok\\file\\Beauty-Solution-\\beauty-solutions-yii\\web'
+    'REMOTE_ADDR' => '::1'
+    'REMOTE_PORT' => '50718'
+    'SERVER_SOFTWARE' => 'PHP 8.2.12 Development Server'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_PORT' => '8080'
+    'REQUEST_URI' => '/transaksi-pembelian/update?id=31'
+    'REQUEST_METHOD' => 'GET'
+    'SCRIPT_NAME' => '/index.php'
+    'SCRIPT_FILENAME' => 'D:\\Basisdata\\tugas kelompok\\file\\Beauty-Solution-\\beauty-solutions-yii\\web\\index.php'
+    'PATH_INFO' => '/transaksi-pembelian/update'
+    'PHP_SELF' => '/index.php/transaksi-pembelian/update'
+    'QUERY_STRING' => 'id=31'
+    'HTTP_HOST' => 'localhost:8080'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_SEC_CH_UA' => '\"Google Chrome\";v=\"131\", \"Chromium\";v=\"131\", \"Not_A Brand\";v=\"24\"'
+    'HTTP_SEC_CH_UA_MOBILE' => '?0'
+    'HTTP_SEC_CH_UA_PLATFORM' => '\"Windows\"'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/131.0.0.0 Safari/537.36'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7'
+    'HTTP_SEC_FETCH_SITE' => 'same-origin'
+    'HTTP_SEC_FETCH_MODE' => 'navigate'
+    'HTTP_SEC_FETCH_USER' => '?1'
+    'HTTP_SEC_FETCH_DEST' => 'document'
+    'HTTP_REFERER' => 'http://localhost:8080/transaksi-pembelian/view?id=31'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br, zstd'
+    'HTTP_ACCEPT_LANGUAGE' => 'id-ID,id;q=0.9,en-US;q=0.8,en;q=0.7'
+    'HTTP_COOKIE' => '_identity=c1de3af0e62b881608198f8e21b0d36ed8a8167b111e0e92943d43047940a7bea%3A2%3A%7Bi%3A0%3Bs%3A9%3A%22_identity%22%3Bi%3A1%3Bs%3A28%3A%22%5B%22101%22%2C%22test101key%22%2C2592000%5D%22%3B%7D; PHPSESSID=jlioj9dcejpsp0kaudhpif5201; _csrf=f2c7d4a4b8d744c667d9c472c83a057f9a8c003d072e999f3dd2a6f9434cb132a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22nQ7h7RwaJPxtS3XUrkPb8C9yTol6TmFR%22%3B%7D'
+    'REQUEST_TIME_FLOAT' => 1734837699.9422
+    'REQUEST_TIME' => 1734837699
+]
+2024-12-22 04:24:04 [::1][101][jlioj9dcejpsp0kaudhpif5201][error][yii\base\ErrorException:2] yii\base\ErrorException: Undefined variable $distributor in D:\Basisdata\tugas kelompok\file\Beauty-Solution-\beauty-solutions-yii\views\transaksi-pembelian\_form.php:19
+Stack trace:
+#0 D:\Basisdata\tugas kelompok\file\Beauty-Solution-\beauty-solutions-yii\views\transaksi-pembelian\_form.php(19): yii\base\ErrorHandler->handleError(2, 'Undefined varia...', 'D:\\Basisdata\\tu...', 19)
+#1 D:\Basisdata\tugas kelompok\file\Beauty-Solution-\beauty-solutions-yii\vendor\yiisoft\yii2\base\View.php(348): require('D:\\Basisdata\\tu...')
+#2 D:\Basisdata\tugas kelompok\file\Beauty-Solution-\beauty-solutions-yii\vendor\yiisoft\yii2\base\View.php(258): yii\base\View->renderPhpFile('D:\\Basisdata\\tu...', Array)
+#3 D:\Basisdata\tugas kelompok\file\Beauty-Solution-\beauty-solutions-yii\vendor\yiisoft\yii2\base\View.php(157): yii\base\View->renderFile('D:\\Basisdata\\tu...', Array, NULL)
+#4 D:\Basisdata\tugas kelompok\file\Beauty-Solution-\beauty-solutions-yii\views\transaksi-pembelian\update.php(17): yii\base\View->render('_form', Array)
+#5 D:\Basisdata\tugas kelompok\file\Beauty-Solution-\beauty-solutions-yii\vendor\yiisoft\yii2\base\View.php(348): require('D:\\Basisdata\\tu...')
+#6 D:\Basisdata\tugas kelompok\file\Beauty-Solution-\beauty-solutions-yii\vendor\yiisoft\yii2\base\View.php(258): yii\base\View->renderPhpFile('D:\\Basisdata\\tu...', Array)
+#7 D:\Basisdata\tugas kelompok\file\Beauty-Solution-\beauty-solutions-yii\vendor\yiisoft\yii2\base\View.php(157): yii\base\View->renderFile('D:\\Basisdata\\tu...', Array, Object(app\controllers\TransaksiPembelianController))
+#8 D:\Basisdata\tugas kelompok\file\Beauty-Solution-\beauty-solutions-yii\vendor\yiisoft\yii2\base\Controller.php(407): yii\base\View->render('update', Array, Object(app\controllers\TransaksiPembelianController))
+#9 D:\Basisdata\tugas kelompok\file\Beauty-Solution-\beauty-solutions-yii\controllers\TransaksiPembelianController.php(224): yii\base\Controller->render('update', Array)
+#10 [internal function]: app\controllers\TransaksiPembelianController->actionUpdate('31')
+#11 D:\Basisdata\tugas kelompok\file\Beauty-Solution-\beauty-solutions-yii\vendor\yiisoft\yii2\base\InlineAction.php(57): call_user_func_array(Array, Array)
+#12 D:\Basisdata\tugas kelompok\file\Beauty-Solution-\beauty-solutions-yii\vendor\yiisoft\yii2\base\Controller.php(178): yii\base\InlineAction->runWithParams(Array)
+#13 D:\Basisdata\tugas kelompok\file\Beauty-Solution-\beauty-solutions-yii\vendor\yiisoft\yii2\base\Module.php(552): yii\base\Controller->runAction('update', Array)
+#14 D:\Basisdata\tugas kelompok\file\Beauty-Solution-\beauty-solutions-yii\vendor\yiisoft\yii2\web\Application.php(103): yii\base\Module->runAction('transaksi-pembe...', Array)
+#15 D:\Basisdata\tugas kelompok\file\Beauty-Solution-\beauty-solutions-yii\vendor\yiisoft\yii2\base\Application.php(384): yii\web\Application->handleRequest(Object(yii\web\Request))
+#16 D:\Basisdata\tugas kelompok\file\Beauty-Solution-\beauty-solutions-yii\web\index.php(12): yii\base\Application->run()
+#17 {main}
+2024-12-22 04:24:02 [::1][101][jlioj9dcejpsp0kaudhpif5201][info][application] $_GET = [
+    'id' => '31'
+]
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    '_identity' => 'c1de3af0e62b881608198f8e21b0d36ed8a8167b111e0e92943d43047940a7bea:2:{i:0;s:9:\"_identity\";i:1;s:28:\"[\"101\",\"test101key\",2592000]\";}'
+    'PHPSESSID' => 'jlioj9dcejpsp0kaudhpif5201'
+    '_csrf' => 'f2c7d4a4b8d744c667d9c472c83a057f9a8c003d072e999f3dd2a6f9434cb132a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"nQ7h7RwaJPxtS3XUrkPb8C9yTol6TmFR\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__id' => '101'
+    '__authKey' => 'test101key'
+]
+
+$_SERVER = [
+    'DOCUMENT_ROOT' => 'D:\\Basisdata\\tugas kelompok\\file\\Beauty-Solution-\\beauty-solutions-yii\\web'
+    'REMOTE_ADDR' => '::1'
+    'REMOTE_PORT' => '50736'
+    'SERVER_SOFTWARE' => 'PHP 8.2.12 Development Server'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_PORT' => '8080'
+    'REQUEST_URI' => '/transaksi-pembelian/update?id=31'
+    'REQUEST_METHOD' => 'GET'
+    'SCRIPT_NAME' => '/index.php'
+    'SCRIPT_FILENAME' => 'D:\\Basisdata\\tugas kelompok\\file\\Beauty-Solution-\\beauty-solutions-yii\\web\\index.php'
+    'PATH_INFO' => '/transaksi-pembelian/update'
+    'PHP_SELF' => '/index.php/transaksi-pembelian/update'
+    'QUERY_STRING' => 'id=31'
+    'HTTP_HOST' => 'localhost:8080'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_SEC_CH_UA' => '\"Google Chrome\";v=\"131\", \"Chromium\";v=\"131\", \"Not_A Brand\";v=\"24\"'
+    'HTTP_SEC_CH_UA_MOBILE' => '?0'
+    'HTTP_SEC_CH_UA_PLATFORM' => '\"Windows\"'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/131.0.0.0 Safari/537.36'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7'
+    'HTTP_SEC_FETCH_SITE' => 'same-origin'
+    'HTTP_SEC_FETCH_MODE' => 'navigate'
+    'HTTP_SEC_FETCH_USER' => '?1'
+    'HTTP_SEC_FETCH_DEST' => 'document'
+    'HTTP_REFERER' => 'http://localhost:8080/transaksi-pembelian/view?id=31'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br, zstd'
+    'HTTP_ACCEPT_LANGUAGE' => 'id-ID,id;q=0.9,en-US;q=0.8,en;q=0.7'
+    'HTTP_COOKIE' => '_identity=c1de3af0e62b881608198f8e21b0d36ed8a8167b111e0e92943d43047940a7bea%3A2%3A%7Bi%3A0%3Bs%3A9%3A%22_identity%22%3Bi%3A1%3Bs%3A28%3A%22%5B%22101%22%2C%22test101key%22%2C2592000%5D%22%3B%7D; PHPSESSID=jlioj9dcejpsp0kaudhpif5201; _csrf=f2c7d4a4b8d744c667d9c472c83a057f9a8c003d072e999f3dd2a6f9434cb132a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22nQ7h7RwaJPxtS3XUrkPb8C9yTol6TmFR%22%3B%7D'
+    'REQUEST_TIME_FLOAT' => 1734837842.1501
+    'REQUEST_TIME' => 1734837842
+]
+2024-12-22 04:24:13 [::1][101][jlioj9dcejpsp0kaudhpif5201][error][yii\base\ErrorException:2] yii\base\ErrorException: Undefined variable $distributor in D:\Basisdata\tugas kelompok\file\Beauty-Solution-\beauty-solutions-yii\views\transaksi-pembelian\_form.php:19
+Stack trace:
+#0 D:\Basisdata\tugas kelompok\file\Beauty-Solution-\beauty-solutions-yii\views\transaksi-pembelian\_form.php(19): yii\base\ErrorHandler->handleError(2, 'Undefined varia...', 'D:\\Basisdata\\tu...', 19)
+#1 D:\Basisdata\tugas kelompok\file\Beauty-Solution-\beauty-solutions-yii\vendor\yiisoft\yii2\base\View.php(348): require('D:\\Basisdata\\tu...')
+#2 D:\Basisdata\tugas kelompok\file\Beauty-Solution-\beauty-solutions-yii\vendor\yiisoft\yii2\base\View.php(258): yii\base\View->renderPhpFile('D:\\Basisdata\\tu...', Array)
+#3 D:\Basisdata\tugas kelompok\file\Beauty-Solution-\beauty-solutions-yii\vendor\yiisoft\yii2\base\View.php(157): yii\base\View->renderFile('D:\\Basisdata\\tu...', Array, NULL)
+#4 D:\Basisdata\tugas kelompok\file\Beauty-Solution-\beauty-solutions-yii\views\transaksi-pembelian\update.php(17): yii\base\View->render('_form', Array)
+#5 D:\Basisdata\tugas kelompok\file\Beauty-Solution-\beauty-solutions-yii\vendor\yiisoft\yii2\base\View.php(348): require('D:\\Basisdata\\tu...')
+#6 D:\Basisdata\tugas kelompok\file\Beauty-Solution-\beauty-solutions-yii\vendor\yiisoft\yii2\base\View.php(258): yii\base\View->renderPhpFile('D:\\Basisdata\\tu...', Array)
+#7 D:\Basisdata\tugas kelompok\file\Beauty-Solution-\beauty-solutions-yii\vendor\yiisoft\yii2\base\View.php(157): yii\base\View->renderFile('D:\\Basisdata\\tu...', Array, Object(app\controllers\TransaksiPembelianController))
+#8 D:\Basisdata\tugas kelompok\file\Beauty-Solution-\beauty-solutions-yii\vendor\yiisoft\yii2\base\Controller.php(407): yii\base\View->render('update', Array, Object(app\controllers\TransaksiPembelianController))
+#9 D:\Basisdata\tugas kelompok\file\Beauty-Solution-\beauty-solutions-yii\controllers\TransaksiPembelianController.php(224): yii\base\Controller->render('update', Array)
+#10 [internal function]: app\controllers\TransaksiPembelianController->actionUpdate('31')
+#11 D:\Basisdata\tugas kelompok\file\Beauty-Solution-\beauty-solutions-yii\vendor\yiisoft\yii2\base\InlineAction.php(57): call_user_func_array(Array, Array)
+#12 D:\Basisdata\tugas kelompok\file\Beauty-Solution-\beauty-solutions-yii\vendor\yiisoft\yii2\base\Controller.php(178): yii\base\InlineAction->runWithParams(Array)
+#13 D:\Basisdata\tugas kelompok\file\Beauty-Solution-\beauty-solutions-yii\vendor\yiisoft\yii2\base\Module.php(552): yii\base\Controller->runAction('update', Array)
+#14 D:\Basisdata\tugas kelompok\file\Beauty-Solution-\beauty-solutions-yii\vendor\yiisoft\yii2\web\Application.php(103): yii\base\Module->runAction('transaksi-pembe...', Array)
+#15 D:\Basisdata\tugas kelompok\file\Beauty-Solution-\beauty-solutions-yii\vendor\yiisoft\yii2\base\Application.php(384): yii\web\Application->handleRequest(Object(yii\web\Request))
+#16 D:\Basisdata\tugas kelompok\file\Beauty-Solution-\beauty-solutions-yii\web\index.php(12): yii\base\Application->run()
+#17 {main}
+2024-12-22 04:24:11 [::1][101][jlioj9dcejpsp0kaudhpif5201][info][application] $_GET = [
+    'id' => '31'
+]
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    '_identity' => 'c1de3af0e62b881608198f8e21b0d36ed8a8167b111e0e92943d43047940a7bea:2:{i:0;s:9:\"_identity\";i:1;s:28:\"[\"101\",\"test101key\",2592000]\";}'
+    'PHPSESSID' => 'jlioj9dcejpsp0kaudhpif5201'
+    '_csrf' => 'f2c7d4a4b8d744c667d9c472c83a057f9a8c003d072e999f3dd2a6f9434cb132a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"nQ7h7RwaJPxtS3XUrkPb8C9yTol6TmFR\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__id' => '101'
+    '__authKey' => 'test101key'
+]
+
+$_SERVER = [
+    'DOCUMENT_ROOT' => 'D:\\Basisdata\\tugas kelompok\\file\\Beauty-Solution-\\beauty-solutions-yii\\web'
+    'REMOTE_ADDR' => '::1'
+    'REMOTE_PORT' => '50743'
+    'SERVER_SOFTWARE' => 'PHP 8.2.12 Development Server'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_PORT' => '8080'
+    'REQUEST_URI' => '/transaksi-pembelian/update?id=31'
+    'REQUEST_METHOD' => 'GET'
+    'SCRIPT_NAME' => '/index.php'
+    'SCRIPT_FILENAME' => 'D:\\Basisdata\\tugas kelompok\\file\\Beauty-Solution-\\beauty-solutions-yii\\web\\index.php'
+    'PATH_INFO' => '/transaksi-pembelian/update'
+    'PHP_SELF' => '/index.php/transaksi-pembelian/update'
+    'QUERY_STRING' => 'id=31'
+    'HTTP_HOST' => 'localhost:8080'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_SEC_CH_UA' => '\"Google Chrome\";v=\"131\", \"Chromium\";v=\"131\", \"Not_A Brand\";v=\"24\"'
+    'HTTP_SEC_CH_UA_MOBILE' => '?0'
+    'HTTP_SEC_CH_UA_PLATFORM' => '\"Windows\"'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/131.0.0.0 Safari/537.36'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7'
+    'HTTP_SEC_FETCH_SITE' => 'same-origin'
+    'HTTP_SEC_FETCH_MODE' => 'navigate'
+    'HTTP_SEC_FETCH_USER' => '?1'
+    'HTTP_SEC_FETCH_DEST' => 'document'
+    'HTTP_REFERER' => 'http://localhost:8080/transaksi-pembelian/view?id=31'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br, zstd'
+    'HTTP_ACCEPT_LANGUAGE' => 'id-ID,id;q=0.9,en-US;q=0.8,en;q=0.7'
+    'HTTP_COOKIE' => '_identity=c1de3af0e62b881608198f8e21b0d36ed8a8167b111e0e92943d43047940a7bea%3A2%3A%7Bi%3A0%3Bs%3A9%3A%22_identity%22%3Bi%3A1%3Bs%3A28%3A%22%5B%22101%22%2C%22test101key%22%2C2592000%5D%22%3B%7D; PHPSESSID=jlioj9dcejpsp0kaudhpif5201; _csrf=f2c7d4a4b8d744c667d9c472c83a057f9a8c003d072e999f3dd2a6f9434cb132a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22nQ7h7RwaJPxtS3XUrkPb8C9yTol6TmFR%22%3B%7D'
+    'REQUEST_TIME_FLOAT' => 1734837851.1258
+    'REQUEST_TIME' => 1734837851
+]
+2024-12-22 04:24:48 [::1][101][jlioj9dcejpsp0kaudhpif5201][error][yii\base\ErrorException:2] yii\base\ErrorException: Undefined variable $barang in D:\Basisdata\tugas kelompok\file\Beauty-Solution-\beauty-solutions-yii\views\transaksi-pembelian\update.php:19
+Stack trace:
+#0 D:\Basisdata\tugas kelompok\file\Beauty-Solution-\beauty-solutions-yii\views\transaksi-pembelian\update.php(19): yii\base\ErrorHandler->handleError(2, 'Undefined varia...', 'D:\\Basisdata\\tu...', 19)
+#1 D:\Basisdata\tugas kelompok\file\Beauty-Solution-\beauty-solutions-yii\vendor\yiisoft\yii2\base\View.php(348): require('D:\\Basisdata\\tu...')
+#2 D:\Basisdata\tugas kelompok\file\Beauty-Solution-\beauty-solutions-yii\vendor\yiisoft\yii2\base\View.php(258): yii\base\View->renderPhpFile('D:\\Basisdata\\tu...', Array)
+#3 D:\Basisdata\tugas kelompok\file\Beauty-Solution-\beauty-solutions-yii\vendor\yiisoft\yii2\base\View.php(157): yii\base\View->renderFile('D:\\Basisdata\\tu...', Array, Object(app\controllers\TransaksiPembelianController))
+#4 D:\Basisdata\tugas kelompok\file\Beauty-Solution-\beauty-solutions-yii\vendor\yiisoft\yii2\base\Controller.php(407): yii\base\View->render('update', Array, Object(app\controllers\TransaksiPembelianController))
+#5 D:\Basisdata\tugas kelompok\file\Beauty-Solution-\beauty-solutions-yii\controllers\TransaksiPembelianController.php(224): yii\base\Controller->render('update', Array)
+#6 [internal function]: app\controllers\TransaksiPembelianController->actionUpdate('31')
+#7 D:\Basisdata\tugas kelompok\file\Beauty-Solution-\beauty-solutions-yii\vendor\yiisoft\yii2\base\InlineAction.php(57): call_user_func_array(Array, Array)
+#8 D:\Basisdata\tugas kelompok\file\Beauty-Solution-\beauty-solutions-yii\vendor\yiisoft\yii2\base\Controller.php(178): yii\base\InlineAction->runWithParams(Array)
+#9 D:\Basisdata\tugas kelompok\file\Beauty-Solution-\beauty-solutions-yii\vendor\yiisoft\yii2\base\Module.php(552): yii\base\Controller->runAction('update', Array)
+#10 D:\Basisdata\tugas kelompok\file\Beauty-Solution-\beauty-solutions-yii\vendor\yiisoft\yii2\web\Application.php(103): yii\base\Module->runAction('transaksi-pembe...', Array)
+#11 D:\Basisdata\tugas kelompok\file\Beauty-Solution-\beauty-solutions-yii\vendor\yiisoft\yii2\base\Application.php(384): yii\web\Application->handleRequest(Object(yii\web\Request))
+#12 D:\Basisdata\tugas kelompok\file\Beauty-Solution-\beauty-solutions-yii\web\index.php(12): yii\base\Application->run()
+#13 {main}
+2024-12-22 04:24:46 [::1][101][jlioj9dcejpsp0kaudhpif5201][info][application] $_GET = [
+    'id' => '31'
+]
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    '_identity' => 'c1de3af0e62b881608198f8e21b0d36ed8a8167b111e0e92943d43047940a7bea:2:{i:0;s:9:\"_identity\";i:1;s:28:\"[\"101\",\"test101key\",2592000]\";}'
+    'PHPSESSID' => 'jlioj9dcejpsp0kaudhpif5201'
+    '_csrf' => 'f2c7d4a4b8d744c667d9c472c83a057f9a8c003d072e999f3dd2a6f9434cb132a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"nQ7h7RwaJPxtS3XUrkPb8C9yTol6TmFR\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__id' => '101'
+    '__authKey' => 'test101key'
+]
+
+$_SERVER = [
+    'DOCUMENT_ROOT' => 'D:\\Basisdata\\tugas kelompok\\file\\Beauty-Solution-\\beauty-solutions-yii\\web'
+    'REMOTE_ADDR' => '::1'
+    'REMOTE_PORT' => '50744'
+    'SERVER_SOFTWARE' => 'PHP 8.2.12 Development Server'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_PORT' => '8080'
+    'REQUEST_URI' => '/transaksi-pembelian/update?id=31'
+    'REQUEST_METHOD' => 'GET'
+    'SCRIPT_NAME' => '/index.php'
+    'SCRIPT_FILENAME' => 'D:\\Basisdata\\tugas kelompok\\file\\Beauty-Solution-\\beauty-solutions-yii\\web\\index.php'
+    'PATH_INFO' => '/transaksi-pembelian/update'
+    'PHP_SELF' => '/index.php/transaksi-pembelian/update'
+    'QUERY_STRING' => 'id=31'
+    'HTTP_HOST' => 'localhost:8080'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_SEC_CH_UA' => '\"Google Chrome\";v=\"131\", \"Chromium\";v=\"131\", \"Not_A Brand\";v=\"24\"'
+    'HTTP_SEC_CH_UA_MOBILE' => '?0'
+    'HTTP_SEC_CH_UA_PLATFORM' => '\"Windows\"'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/131.0.0.0 Safari/537.36'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7'
+    'HTTP_SEC_FETCH_SITE' => 'same-origin'
+    'HTTP_SEC_FETCH_MODE' => 'navigate'
+    'HTTP_SEC_FETCH_USER' => '?1'
+    'HTTP_SEC_FETCH_DEST' => 'document'
+    'HTTP_REFERER' => 'http://localhost:8080/transaksi-pembelian/view?id=31'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br, zstd'
+    'HTTP_ACCEPT_LANGUAGE' => 'id-ID,id;q=0.9,en-US;q=0.8,en;q=0.7'
+    'HTTP_COOKIE' => '_identity=c1de3af0e62b881608198f8e21b0d36ed8a8167b111e0e92943d43047940a7bea%3A2%3A%7Bi%3A0%3Bs%3A9%3A%22_identity%22%3Bi%3A1%3Bs%3A28%3A%22%5B%22101%22%2C%22test101key%22%2C2592000%5D%22%3B%7D; PHPSESSID=jlioj9dcejpsp0kaudhpif5201; _csrf=f2c7d4a4b8d744c667d9c472c83a057f9a8c003d072e999f3dd2a6f9434cb132a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22nQ7h7RwaJPxtS3XUrkPb8C9yTol6TmFR%22%3B%7D'
+    'REQUEST_TIME_FLOAT' => 1734837886.0135
+    'REQUEST_TIME' => 1734837886
+]
+2024-12-22 04:24:56 [::1][101][jlioj9dcejpsp0kaudhpif5201][error][yii\base\ErrorException:2] yii\base\ErrorException: Undefined variable $barang in D:\Basisdata\tugas kelompok\file\Beauty-Solution-\beauty-solutions-yii\views\transaksi-pembelian\update.php:19
+Stack trace:
+#0 D:\Basisdata\tugas kelompok\file\Beauty-Solution-\beauty-solutions-yii\views\transaksi-pembelian\update.php(19): yii\base\ErrorHandler->handleError(2, 'Undefined varia...', 'D:\\Basisdata\\tu...', 19)
+#1 D:\Basisdata\tugas kelompok\file\Beauty-Solution-\beauty-solutions-yii\vendor\yiisoft\yii2\base\View.php(348): require('D:\\Basisdata\\tu...')
+#2 D:\Basisdata\tugas kelompok\file\Beauty-Solution-\beauty-solutions-yii\vendor\yiisoft\yii2\base\View.php(258): yii\base\View->renderPhpFile('D:\\Basisdata\\tu...', Array)
+#3 D:\Basisdata\tugas kelompok\file\Beauty-Solution-\beauty-solutions-yii\vendor\yiisoft\yii2\base\View.php(157): yii\base\View->renderFile('D:\\Basisdata\\tu...', Array, Object(app\controllers\TransaksiPembelianController))
+#4 D:\Basisdata\tugas kelompok\file\Beauty-Solution-\beauty-solutions-yii\vendor\yiisoft\yii2\base\Controller.php(407): yii\base\View->render('update', Array, Object(app\controllers\TransaksiPembelianController))
+#5 D:\Basisdata\tugas kelompok\file\Beauty-Solution-\beauty-solutions-yii\controllers\TransaksiPembelianController.php(224): yii\base\Controller->render('update', Array)
+#6 [internal function]: app\controllers\TransaksiPembelianController->actionUpdate('31')
+#7 D:\Basisdata\tugas kelompok\file\Beauty-Solution-\beauty-solutions-yii\vendor\yiisoft\yii2\base\InlineAction.php(57): call_user_func_array(Array, Array)
+#8 D:\Basisdata\tugas kelompok\file\Beauty-Solution-\beauty-solutions-yii\vendor\yiisoft\yii2\base\Controller.php(178): yii\base\InlineAction->runWithParams(Array)
+#9 D:\Basisdata\tugas kelompok\file\Beauty-Solution-\beauty-solutions-yii\vendor\yiisoft\yii2\base\Module.php(552): yii\base\Controller->runAction('update', Array)
+#10 D:\Basisdata\tugas kelompok\file\Beauty-Solution-\beauty-solutions-yii\vendor\yiisoft\yii2\web\Application.php(103): yii\base\Module->runAction('transaksi-pembe...', Array)
+#11 D:\Basisdata\tugas kelompok\file\Beauty-Solution-\beauty-solutions-yii\vendor\yiisoft\yii2\base\Application.php(384): yii\web\Application->handleRequest(Object(yii\web\Request))
+#12 D:\Basisdata\tugas kelompok\file\Beauty-Solution-\beauty-solutions-yii\web\index.php(12): yii\base\Application->run()
+#13 {main}
+2024-12-22 04:24:54 [::1][101][jlioj9dcejpsp0kaudhpif5201][info][application] $_GET = [
+    'id' => '31'
+]
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    '_identity' => 'c1de3af0e62b881608198f8e21b0d36ed8a8167b111e0e92943d43047940a7bea:2:{i:0;s:9:\"_identity\";i:1;s:28:\"[\"101\",\"test101key\",2592000]\";}'
+    'PHPSESSID' => 'jlioj9dcejpsp0kaudhpif5201'
+    '_csrf' => 'f2c7d4a4b8d744c667d9c472c83a057f9a8c003d072e999f3dd2a6f9434cb132a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"nQ7h7RwaJPxtS3XUrkPb8C9yTol6TmFR\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__id' => '101'
+    '__authKey' => 'test101key'
+]
+
+$_SERVER = [
+    'DOCUMENT_ROOT' => 'D:\\Basisdata\\tugas kelompok\\file\\Beauty-Solution-\\beauty-solutions-yii\\web'
+    'REMOTE_ADDR' => '::1'
+    'REMOTE_PORT' => '50753'
+    'SERVER_SOFTWARE' => 'PHP 8.2.12 Development Server'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_PORT' => '8080'
+    'REQUEST_URI' => '/transaksi-pembelian/update?id=31'
+    'REQUEST_METHOD' => 'GET'
+    'SCRIPT_NAME' => '/index.php'
+    'SCRIPT_FILENAME' => 'D:\\Basisdata\\tugas kelompok\\file\\Beauty-Solution-\\beauty-solutions-yii\\web\\index.php'
+    'PATH_INFO' => '/transaksi-pembelian/update'
+    'PHP_SELF' => '/index.php/transaksi-pembelian/update'
+    'QUERY_STRING' => 'id=31'
+    'HTTP_HOST' => 'localhost:8080'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_SEC_CH_UA' => '\"Google Chrome\";v=\"131\", \"Chromium\";v=\"131\", \"Not_A Brand\";v=\"24\"'
+    'HTTP_SEC_CH_UA_MOBILE' => '?0'
+    'HTTP_SEC_CH_UA_PLATFORM' => '\"Windows\"'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/131.0.0.0 Safari/537.36'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7'
+    'HTTP_SEC_FETCH_SITE' => 'same-origin'
+    'HTTP_SEC_FETCH_MODE' => 'navigate'
+    'HTTP_SEC_FETCH_USER' => '?1'
+    'HTTP_SEC_FETCH_DEST' => 'document'
+    'HTTP_REFERER' => 'http://localhost:8080/transaksi-pembelian/view?id=31'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br, zstd'
+    'HTTP_ACCEPT_LANGUAGE' => 'id-ID,id;q=0.9,en-US;q=0.8,en;q=0.7'
+    'HTTP_COOKIE' => '_identity=c1de3af0e62b881608198f8e21b0d36ed8a8167b111e0e92943d43047940a7bea%3A2%3A%7Bi%3A0%3Bs%3A9%3A%22_identity%22%3Bi%3A1%3Bs%3A28%3A%22%5B%22101%22%2C%22test101key%22%2C2592000%5D%22%3B%7D; PHPSESSID=jlioj9dcejpsp0kaudhpif5201; _csrf=f2c7d4a4b8d744c667d9c472c83a057f9a8c003d072e999f3dd2a6f9434cb132a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22nQ7h7RwaJPxtS3XUrkPb8C9yTol6TmFR%22%3B%7D'
+    'REQUEST_TIME_FLOAT' => 1734837894.2308
+    'REQUEST_TIME' => 1734837894
+]
